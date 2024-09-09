@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Sederhana</h1>
+        <div class="form-group">
+            <label for="num1">Bilangan 1:</label>
+            <input type="number" id="num1">
+        </div>
+        <div class="form-group">
+            <label for="num2">Bilangan 2:</label>
+            <input type="number" id="num2">
+        </div>
+        <div class="form-group">
+            <label for="operator">Pilih Operator:</label>
+            <select id="operator">
+                <option value="add">Tambah (+)</option>
+                <option value="subtract">Kurang (-)</option>
+                <option value="multiply">Kali (*)</option>
+                <option value="divide">Bagi (/)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button onclick="hitung()">Hitung</button>
+        </div>
+        <div class="result">
+            <p id="hasil"></p>
+        </div>
+    </div>
+
+    <script>
+        function hitung() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operator = document.getElementById('operator').value;
+
+            var result;
+
+            switch (operator) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        result = 'Tidak bisa membagi dengan nol';
+                    }
+                    break;
+                default:
+                    result = 'Operator tidak valid';
+            }
+
+            document.getElementById('hasil').innerText = 'Hasil: ' + result;
+        }
+    </script>
+</body>
+</html>

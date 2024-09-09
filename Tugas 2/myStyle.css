@@ -1,0 +1,71 @@
+
+h1{
+   text-align: center; 
+}
+
+body{
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.isibiodata{
+    width: 600px;
+    margin : 0px auto;
+    padding : 30px 40px;
+    border: 3px solid black;
+    background-color: beige;
+
+}
+
+label{
+    font-size: 20px;
+}
+
+input#npm, input#nama{
+    margin: 15px;
+    width: 400px;
+    height: 25px;
+}
+
+input#jeniskelamin{
+    margin: 15px;
+}
+
+#pilihanJK, .angkatan div, .kelas div, .hobi div{
+    margin: 15px;
+}
+
+textarea#alamat{
+    margin: 15px;
+    width: 400px;
+    height: 100px;
+    max-width: 400px;
+    max-height: 100px;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    margin: 0px 200px;
+    border-radius: 4px;
+    font-size: 17px;
+    background-color: rgb(0, 0, 180);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
